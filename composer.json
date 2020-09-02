@@ -1,0 +1,8 @@
+{
+	"name": "devblin/kato",
+	"description": "An ecommerce web-app with both buyer and seller interfaces.",
+	"type": "project",
+	"require": {
+		"vlucas/phpdotenv": "^5.3"
+	}
+}
