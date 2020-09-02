@@ -1,5 +1,5 @@
 # Kato
 
-<p stlye="align:center;">
+<p align="center">
   <img src="katologo.jpeg" alt="Kato"/>
 </p>
