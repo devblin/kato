@@ -17,3 +17,14 @@
 * Bootstrap
 * AJAX
 * Server Side Events
+
+## Tasks
+- [x] Login and Register
+- [ ] Username and Password Validation
+- [ ] Authentication
+- [ ] Dashboard
+- [ ] Adding Items to Cart
+- [ ] Handle Storage
+- [ ] Search Bar
+- [ ] Purchase History
+- [ ] Statistics
