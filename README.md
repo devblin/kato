@@ -12,7 +12,7 @@
 
 ## Technologies Used
 * PHP
-* HTML, CSS, JAVASCRIPT
+* HTML, CSS, JavaScript
 * jQuery
 * Bootstrap
 * AJAX
