@@ -9,3 +9,10 @@
 #### 1. Change variable values in `/setup/env_sample.php` and rename to `/setup/env.php`.
 
 #### 2. Go to BASE_URL to run.
+
+## Technologies Used
+* PHP
+* HTML, CSS, JAVASCRIPT
+* jQuery
+* AJAX
+* Server Side Events
