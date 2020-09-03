@@ -1,0 +1,18 @@
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+}
+.logobgcolor {
+  background-color: #d1294e;
+}
+.logocolor {
+  color: #d1294e;
+}
+.max500 {
+  max-width: 500px;
+}
+.max400 {
+  max-width: 400px;
+}
