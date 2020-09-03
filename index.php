@@ -1,6 +1,6 @@
 <?php
 session_start();
-// require_once __DIR__ . "/setup/connection.php";
+require_once __DIR__ . "/setup/connection.php";
 require_once __DIR__ . "/setup/autoload.php";
 $dir = env("FOLDER");
 $baseUrl = env("BASE_URL");
@@ -21,10 +21,11 @@ $router = str_replace($dir, "", $router);
         integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <link rel="shortcut icon" href="katologo.jpeg" type="image/x-icon">
     <link rel="stylesheet" href="cssandjs/css/index.css">
-    <title>Kato</title>
+
 </head>
 
 <body>
+    <h2 class="logocolor">Kato</h2>
     <input id="baseurl" type="hidden" value=<?php echo $baseUrl; ?>>
     <?php
     if (!isset($_SESSION['USER'])) {
@@ -45,7 +46,6 @@ $router = str_replace($dir, "", $router);
     } else {
     }
     ?>
-    <footer style="position: absolute;">&copy; devblin</footer>
 </body>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
