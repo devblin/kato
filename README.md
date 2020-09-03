@@ -14,5 +14,6 @@
 * PHP
 * HTML, CSS, JAVASCRIPT
 * jQuery
+* Bootstrap
 * AJAX
 * Server Side Events
