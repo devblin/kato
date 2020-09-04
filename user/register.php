@@ -24,7 +24,7 @@ echo "<title>Kato | Register</title>";
             <input id="newuname" type="text" class="form-control" placeholder="New Username" required>
         </div>
         <div class="form-group mb-2">
-            <select id="newutype" class="form-control logocolor" required>
+            <select id="newrole" class="form-control logocolor" required>
                 <option value="" selected disabled hidden>Who Are You?</option>
                 <option value="Buyer">Buyer</option>
                 <option value="Seller">Seller</option>

@@ -15,11 +15,14 @@ $router = str_replace($dir, "", $router);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Cache-control" content="no-cache">
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
         integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <link rel="shortcut icon" href="katologo.jpeg" type="image/x-icon">
+
     <link rel="stylesheet" href="cssandjs/css/index.css">
 
 </head>
@@ -27,6 +30,7 @@ $router = str_replace($dir, "", $router);
 <body>
     <h2 class="logocolor">Kato</h2>
     <input id="baseurl" type="hidden" value=<?php echo $baseUrl; ?>>
+    <script src="cssandjs/js/index.js"></script>
     <?php
     if (!isset($_SESSION['USER'])) {
         switch ($router) {
@@ -44,15 +48,17 @@ $router = str_replace($dir, "", $router);
                 break;
         }
     } else {
+        switch ($router) {
+            case "/":
+                include(__DIR__ . "/main/home.php");
+                break;
+
+            default:
+                include(__DIR__ . "/error/505.php");
+                break;
+        }
     }
     ?>
 </body>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<script>
-let baseUrl = $("#baseurl").val();
-</script>
 
 </html>
