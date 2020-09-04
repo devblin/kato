@@ -4,7 +4,7 @@ echo "<title>Kato | Login</title>";
 
 <div class="container-fluid text-center max400 d-flex flex-column">
     <h1 class="m-5">Login</h1>
-    <div class="mb-2 text-danger" id="info"></div>
+    <div class="mb-2" id="info"></div>
     <form>
         <div class="input-group mb-2">
             <div class="input-group-prepend">

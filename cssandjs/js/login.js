@@ -20,16 +20,16 @@ loginBtn.click(e => {
       if (data == 1) {
         window.location = baseUrl;
       } else if (data == 0) {
-        showInfo("Username doesn't exist");
+        showInfo("Username doesn't exist", true);
       } else {
-        showInfo("Invalid Credentials");
+        showInfo("Invalid Credentials", true);
       }
       whileAuth("login", false, "Login");
     };
 
     sendAjax(url, "POST", data, beforeSend, success);
   } else {
-    showInfo("Username/Password field empty!");
+    showInfo("Username/Password field empty!", true);
     console.log("EMPTY");
   }
 });

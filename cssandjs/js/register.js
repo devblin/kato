@@ -1,5 +1,7 @@
 let registerBtn = $("#register");
 registerBtn.click(e => {
+  e.preventDefault();
+  var url = baseUrl + "/user/user_auth.php";
   var data = {
     register: true,
     newfname: $("#newfname").val(),
@@ -12,4 +14,17 @@ registerBtn.click(e => {
   var beforeSend = function () {
     whileAuth("register", true, smallSpinner);
   };
+  var success = function (data) {
+    if (data == 1) {
+      showInfo("Registration Successfull!", false);
+    } else {
+      console.log(data);
+      showInfo("ERROR! Please Check Log for details", true);
+    }
+  };
+  if (false) {
+    sendAjax(url, "POST", data, beforeSend, success);
+  } else {
+    showInfo("Empty Field(s)", true);
+  }
 });

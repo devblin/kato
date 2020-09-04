@@ -3,9 +3,16 @@ let defaultSpinner = "<span class='spinner-border'></span>";
 let smallSpinner =
   "<span class='spinner-border' style='height:1.4rem;width:1.4rem;'></span>";
 
-function showInfo(msg) {
+function showInfo(msg, error) {
+  if (error == true) {
+    $("#info").addClass("text-danger");
+  } else {
+    $("#info").addClass("text-success");
+  }
   $("#info").html(msg);
   $(".info").focusin(function () {
+    $("#info").removeClass("text-danger");
+    $("#info").removeClass("text-success");
     $("#info").html("");
   });
 }
