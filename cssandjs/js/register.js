@@ -21,6 +21,7 @@ registerBtn.click(e => {
       console.log(data);
       showInfo("ERROR! Please Check Log for details", true);
     }
+    whileAuth("register", false, "Register");
   };
   function ifEmpty() {
     var res = true;
