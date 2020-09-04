@@ -1,9 +1,9 @@
 <?php
 session_start();
-require_once __DIR__ . "/setup/connection.php";
-require_once __DIR__ . "/setup/autoload.php";
-$dir = env("FOLDER");
-$baseUrl = env("BASE_URL");
+// require_once __DIR__ . "/setup/connection.php";
+// require_once __DIR__ . "/setup/autoload.php";
+// $dir = env("FOLDER");
+// $baseUrl = env("BASE_URL");
 $router = $_SERVER['REQUEST_URI'];
 $router = str_replace($dir, "", $router);
 // echo $router;
