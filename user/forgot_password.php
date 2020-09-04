@@ -11,7 +11,7 @@ echo "<title>Kato | Reset Password</title>";
             </div>
             <input id="forgotuname" type="text" class="form-control" placeholder="Username" required>
         </div>
-        <div class="input-group mb-2">
+        <div class="input-group mb-3">
             <div class="input-group-prepend">
                 <span class=" input-group-text logobgcolor text-white">
                     <i class=" fas fa-key"></i></span>
