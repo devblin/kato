@@ -22,7 +22,16 @@ registerBtn.click(e => {
       showInfo("ERROR! Please Check Log for details", true);
     }
   };
-  if (false) {
+  function ifEmpty() {
+    var res = true;
+    $.each(data, (key, value) => {
+      if (value == "" || value == null) {
+        res = false;
+      }
+    });
+    return res;
+  }
+  if (ifEmpty()) {
     sendAjax(url, "POST", data, beforeSend, success);
   } else {
     showInfo("Empty Field(s)", true);
