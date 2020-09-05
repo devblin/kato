@@ -45,7 +45,7 @@ $("#newuname").on("input", function () {
     "Username Available",
     "Username Already Taken",
     val,
-    /^[A-Za-z0-9]{3,}/,
+    /^[A-Za-z0-9]{3,}$/,
     "USERNAME"
   );
   newUname.validate();

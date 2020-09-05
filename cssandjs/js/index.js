@@ -5,14 +5,12 @@ let smallSpinner =
 
 function showInfo(msg, error) {
   if (error == true) {
-    $("#info").addClass("text-danger");
+    $("#info").css("color", "red");
   } else {
-    $("#info").addClass("text-success");
+    $("#info").css("color", "green");
   }
   $("#info").html(msg);
-  $(".info").on("focusin click keypress", function () {
-    $("#info").removeClass("text-danger");
-    $("#info").removeClass("text-success");
+  $(".info").on("focus", function () {
     $("#info").html("");
   });
 }
