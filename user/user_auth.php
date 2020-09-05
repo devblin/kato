@@ -37,4 +37,10 @@ if (isset($_POST['login'])) {
     } else {
         echo 0;
     }
+} else if (isset($_POST['type'])) {
+    $type = $_POST['type'];
+    $valid = $_POST['valid'];
+    $sql = "SELECT * FROM users WHERE $type=?";
+    $check  = checkData($sql, "s", array($valid));
+    echo $check;
 }

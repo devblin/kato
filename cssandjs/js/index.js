@@ -10,11 +10,21 @@ function showInfo(msg, error) {
     $("#info").addClass("text-success");
   }
   $("#info").html(msg);
-  $(".info").focusin(function () {
+  $(".info").on("focusin click keypress", function () {
     $("#info").removeClass("text-danger");
     $("#info").removeClass("text-success");
     $("#info").html("");
   });
+}
+
+function ifEmpty(data, ...condition) {
+  var res = true;
+  $.each(data, (key, value) => {
+    if (value == condition[0] || value == condition[1]) {
+      res = false;
+    }
+  });
+  return res;
 }
 
 function whileAuth(id, bool, msg) {
