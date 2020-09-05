@@ -10,7 +10,7 @@ function showInfo(msg, error) {
     $("#info").css("color", "green");
   }
   $("#info").html(msg);
-  $(".info").on("focus", function () {
+  $(".info").on("click", function () {
     $("#info").html("");
   });
 }
