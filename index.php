@@ -12,9 +12,9 @@ $router = str_replace($dir, "", $router);
 <html lang="en">
 
 <head>
+    <meta http-equiv="Cache-control" content="no-cache">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
-    <meta http-equiv="Cache-control" content="no-cache">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
@@ -26,9 +26,28 @@ $router = str_replace($dir, "", $router);
     <link rel="stylesheet" href="cssandjs/css/index.css">
 
 </head>
+<style>
+/* #d1294e */
+#logoi {
+    background: linear-gradient(45deg, rgba(209, 41, 78, 0.5) 20%, rgb(209 41 78) 40%, rgb(209 41 78) 60%, rgba(209, 41, 78, 0.5) 80%);
+    background-size: 200% auto;
+    color: #000;
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 1s linear infinite;
+}
+
+@keyframes shine {
+    to {
+        background-position: 200% center;
+    }
+}
+</style>
 
 <body>
-    <h2 class="logocolor">Kato</h2>
+    <h2 class="logocolor p-1"><i class="fas fa-shopping-cart" id="logoi"></i> Kato</h2>
     <input id="baseurl" type="hidden" value=<?php echo $baseUrl; ?>>
     <script src="cssandjs/js/index.js"></script>
     <?php

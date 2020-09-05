@@ -1,6 +1,12 @@
 <?php
 echo "<title>Kato | Register</title>";
 ?>
+<style>
+#showpwd:hover {
+    color: #d1294e;
+    cursor: pointer;
+}
+</style>
 <div class="container-fluid text-center max400 d-flex flex-column">
     <h1 class="m-5">Register</h1>
     <div class="mb-2" id="info"></div>
@@ -38,20 +44,22 @@ echo "<title>Kato | Register</title>";
             </div>
             <input id="newemail" type="email" class="form-control info" placeholder="E-Mail" required>
         </div>
-        <div class="input-group mb-sm-2 mb-1 ">
+        <div class="input-group mb-sm-2 mb-1 clearfix">
             <div class="input-group-prepend">
                 <span class=" input-group-text logobgcolor text-white">
                     <i class=" fas fa-key"></i></span>
             </div>
-            <input id="newpwd" type="password" class="form-control info" placeholder="Password" required>
+            <input id="newpwd" type="password" class="form-control info pwds" placeholder="Password" required>
         </div>
         <div class="input-group mb-sm-2 mb-1 ">
             <div class="input-group-prepend">
                 <span class=" input-group-text logobgcolor text-white">
                     <i class=" fas fa-check-circle"></i></span>
             </div>
-            <input id="newcpwd" type="password" class="form-control info" placeholder="Confirm Password" required>
+            <input id="newcpwd" type="password" class="form-control info pwds" placeholder="Confirm Password" required>
         </div>
+        <p class="m-2"><span class="float-left mb-2"><i class="fas fa-eye" id="showpwd"></i> Show
+                Password</span></p>
         <button id="register" class="btn btn-dark w-100 logobgcolor p-2">Register</button>
         <p class="m-2">Already Registered? <a class="logocolor" href=<?php echo $baseUrl; ?>>Login</a>
         </p>
