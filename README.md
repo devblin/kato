@@ -1,7 +1,7 @@
 # 🛒 Kato
 
 <p align="center">
-  <img src="katologo.PNG" alt="Kato"/>
+  <img src="katologo.PNG" alt="Kato" max-width="200px"/>
 </p>
 
 ## Usage
