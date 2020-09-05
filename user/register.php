@@ -8,13 +8,13 @@ echo "<title>Kato | Register</title>";
 }
 </style>
 <div class="container-fluid text-center max400 d-flex flex-column">
-    <h1 class="m-5">Register</h1>
+    <h1 class="m-5 logodcolor">Register</h1>
     <div class="mb-2" id="info"></div>
     <form>
         <div class="row">
             <div class="input-group mb-sm-2 mb-1 col-sm-6 pr-sm-1">
                 <div class="input-group-prepend">
-                    <span class="input-group-text logobgcolor text-white">
+                    <span class="input-group-text logobgdcolor text-white">
                         <i class="fas fa-user"></i></span>
                 </div>
                 <input id="newfname" type="text" class="form-control info" placeholder="Firstname" required>
@@ -25,7 +25,7 @@ echo "<title>Kato | Register</title>";
         </div>
         <div class="input-group mb-sm-2 mb-1 ">
             <div class="input-group-prepend">
-                <span class=" input-group-text logobgcolor text-white">
+                <span class=" input-group-text logobgdcolor text-white">
                     <i class="fas fa-user-secret"></i></span>
             </div>
             <input id="newuname" type="text" class="form-control info" placeholder="New Username" required>
@@ -39,21 +39,21 @@ echo "<title>Kato | Register</title>";
         </div>
         <div class="input-group mb-sm-2 mb-1 ">
             <div class="input-group-prepend">
-                <span class=" input-group-text logobgcolor text-white">
+                <span class=" input-group-text logobgdcolor text-white">
                     <i class="fas fa-at"></i></span>
             </div>
             <input id="newemail" type="email" class="form-control info" placeholder="E-Mail" required>
         </div>
         <div class="input-group mb-sm-2 mb-1 clearfix">
             <div class="input-group-prepend">
-                <span class=" input-group-text logobgcolor text-white">
+                <span class=" input-group-text logobgdcolor text-white">
                     <i class=" fas fa-key"></i></span>
             </div>
             <input id="newpwd" type="password" class="form-control info pwds" placeholder="Password" required>
         </div>
         <div class="input-group mb-sm-2 mb-1 ">
             <div class="input-group-prepend">
-                <span class=" input-group-text logobgcolor text-white">
+                <span class=" input-group-text logobgdcolor text-white">
                     <i class=" fas fa-check-circle"></i></span>
             </div>
             <input id="newcpwd" type="password" class="form-control info pwds" placeholder="Confirm Password" required>
