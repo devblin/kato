@@ -3,19 +3,19 @@ echo "<title>Kato | Login</title>";
 ?>
 
 <div class="container-fluid text-center max400 d-flex flex-column">
-    <h1 class="m-5">Login</h1>
+    <h1 class="m-5 logodcolor">Login</h1>
     <div class="mb-2" id="info"></div>
     <form>
         <div class="input-group mb-2">
             <div class="input-group-prepend">
-                <span class="input-group-text logobgcolor text-white">
+                <span class="input-group-text logobgdcolor text-white">
                     <i class="fas fa-user"></i></span>
             </div>
             <input id="username" type="text" class="form-control info" placeholder="Username" required>
         </div>
         <div class="input-group mb-2">
             <div class="input-group-prepend">
-                <span class=" input-group-text logobgcolor text-white">
+                <span class=" input-group-text logobgdcolor text-white">
                     <i class=" fas fa-key"></i></span>
             </div>
             <input id="userpwd" type="password" class="form-control info" placeholder="Password" required>
