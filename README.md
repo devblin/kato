@@ -11,17 +11,19 @@
 #### 2. Go to BASE_URL to run.
 
 ## Technologies Used
-* PHP
-* HTML, CSS, JavaScript
-* jQuery
-* Bootstrap
-* AJAX
-* Server Side Events
+
+- PHP
+- HTML, CSS, JavaScript
+- jQuery
+- Bootstrap
+- AJAX
+- Server Side Events
 
 ## Tasks
+
 - [x] Login and Register
-- [ ] Username and Password Validation
-- [ ] Authentication
+- [x] Username and Password Validation
+- [x] Authentication
 - [ ] Dashboard
 - [ ] Adding Items to Cart
 - [ ] Handle Storage
