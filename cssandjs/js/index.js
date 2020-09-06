@@ -3,6 +3,10 @@ let defaultSpinner = "<span class='spinner-border'></span>";
 let smallSpinner =
   "<span class='spinner-border' style='height:1.4rem;width:1.4rem;'></span>";
 
+$(document).ready(function () {
+  $('[data-toggle="tooltip"]').tooltip();
+});
+
 function showInfo(msg, error) {
   if (error == true) {
     $("#info").css("color", "red");

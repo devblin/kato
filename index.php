@@ -47,7 +47,7 @@ $router = str_replace($dir, "", $router);
 </style>
 
 <body>
-    <h2 class="logocolor p-1"><i class="fas fa-shopping-cart" id="logoi"></i> Kato</h2>
+    <h2 id="logo" class="logocolor p-1"><i class="fas fa-shopping-cart" id="logoi"></i> Kato</h2>
     <input id="baseurl" type="hidden" value=<?php echo $baseUrl; ?>>
     <script src="cssandjs/js/index.js"></script>
     <?php
