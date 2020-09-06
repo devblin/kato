@@ -19,12 +19,10 @@ $router = str_replace($dir, "", $router);
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
-        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/70ccd1e73b.js" crossorigin="anonymous"></script>
     <link rel="shortcut icon" href="katologo.jpeg" type="image/x-icon">
-
     <link rel="stylesheet" href="cssandjs/css/index.css">
-
+    <link rel="stylesheet" href="cssandjs/css/nav.css">
 </head>
 <style>
 /* #d1294e */
