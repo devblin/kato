@@ -3,7 +3,9 @@ echo "<title>Home | Kato</title>";
 $homeUrl = $baseUrl;
 ?>
 <style>
-
+#logo {
+    display: none;
+}
 </style>
 <div class="container-fluid text-center p-0">
     <div id="mySidepanel" class="sidepanel">
