@@ -3,9 +3,7 @@ echo "<title>Home | Kato</title>";
 $homeUrl = $baseUrl;
 ?>
 <style>
-#logo {
-    display: none;
-}
+
 </style>
 <div class="container-fluid text-center p-0">
     <div id="mySidepanel" class="sidepanel">
@@ -76,14 +74,6 @@ $homeUrl = $baseUrl;
     </div> -->
 </div>
 <script>
-function openNav() {
-    document.getElementById("mySidepanel").style.width = "250px";
-}
-
-function closeNav() {
-    document.getElementById("mySidepanel").style.width = "0";
-}
-
 let logoutBtn = $(".logout");
 logoutBtn.click(function() {
     window.location = baseUrl + "/user/logout.php";

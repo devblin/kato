@@ -20,6 +20,7 @@ $router = str_replace($dir, "", $router);
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://kit.fontawesome.com/70ccd1e73b.js" crossorigin="anonymous"></script>
+    <script src="cssandjs/js/nav.js"></script>
     <link rel="shortcut icon" href="katologo.jpeg" type="image/x-icon">
     <link rel="stylesheet" href="cssandjs/css/index.css">
     <link rel="stylesheet" href="cssandjs/css/nav.css">
