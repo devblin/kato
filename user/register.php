@@ -7,7 +7,7 @@ echo "<title>Kato | Register</title>";
     cursor: pointer;
 }
 </style>
-<div class="container-fluid text-center max400 d-flex flex-column h-100">
+<div class="container-fluid text-center max400 d-flex flex-column">
     <h1 class="m-5 logodcolor">Register</h1>
     <div class="mb-2" id="info"></div>
     <form>
