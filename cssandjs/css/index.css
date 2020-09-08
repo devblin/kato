@@ -22,6 +22,21 @@ body {
 .max400 {
   max-width: 400px;
 }
+.max300 {
+  max-width: 300px;
+}
+.maxh300 {
+  max-height: 300px;
+}
+.max250 {
+  max-width: 250px;
+}
+.f70 {
+  font-size: 70px;
+}
+.f30 {
+  font-size: 30px;
+}
 .f20 {
   font-size: 20px;
 }
@@ -30,4 +45,19 @@ body {
 }
 .max100 {
   max-width: 100px;
+}
+.itemimg {
+  width: 100%;
+  height: 100%;
+}
+.itemprice {
+  z-index: 2;
+}
+.itemimg:hover {
+  cursor: pointer;
+  transform: scale(0.99);
+  transition: 0.2s;
+}
+.abs {
+  position: absolute;
 }

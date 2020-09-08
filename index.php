@@ -20,10 +20,10 @@ $router = str_replace($dir, "", $router);
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://kit.fontawesome.com/70ccd1e73b.js" crossorigin="anonymous"></script>
-    <script src="cssandjs/js/nav.js"></script>
+    <script src=<?php echo $baseUrl . "/cssandjs/js/nav.js"; ?>></script>
     <link rel="shortcut icon" href="katologo.jpeg" type="image/x-icon">
-    <link rel="stylesheet" href="cssandjs/css/index.css">
-    <link rel="stylesheet" href="cssandjs/css/nav.css">
+    <link rel="stylesheet" href=<?php echo  $baseUrl . "/cssandjs/css/index.css"; ?>>
+    <link rel="stylesheet" href=<?php echo $baseUrl . "/cssandjs/css/nav.css"; ?>>
 </head>
 <style>
 /* #d1294e */
@@ -48,7 +48,7 @@ $router = str_replace($dir, "", $router);
 <body>
     <h2 id="logo" class="logocolor p-1"><i class="fas fa-shopping-cart" id="logoi"></i> Kato</h2>
     <input id="baseurl" type="hidden" value=<?php echo $baseUrl; ?>>
-    <script src="cssandjs/js/index.js"></script>
+    <script src=<?php echo $baseUrl . "/cssandjs/js/index.js"; ?>></script>
     <?php
     if (!isset($_SESSION['USER'])) {
         switch ($router) {
@@ -68,9 +68,9 @@ $router = str_replace($dir, "", $router);
     } else {
         switch ($router) {
             case "/":
+            case (preg_match("/Item\/[a-zA-Z0-9]/i", $router) ? true : false):
                 include(__DIR__ . "/main/home.php");
                 break;
-
             default:
                 include(__DIR__ . "/error/505.php");
                 break;

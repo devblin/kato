@@ -1,7 +1,7 @@
 <div id="mySidepanel" class="sidepanel">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <h3 class="text-light">Welcome, <?php echo $_SESSION['NAME']; ?></h3>
-    <a href="#"><i class="fas fa-user"></i> Account</a>
+    <a href="#"><i class="fas fa-user account"></i> Account</a>
     <a href="#"><i class="fas fa-warehouse"></i> Inventory</a>
     <a href="#"><i class="fas fa-chart-bar"></i> Sales Statistics</a>
     <a href="#" class="text-danger logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
@@ -18,8 +18,8 @@
             <i class="fas fa-sign-out-alt"></i>
         </button>
     </div>
-    <div class="col-sm-9 col-12" style="display: contents;">
-        <button class="btn ml-2 mr-1 f20 text-light d-sm-block d-none" data-toggle="tooltip" title="Account">
+    <div class="col-sm-9 col-12 d-flex clearfix" style="position: absolute;width: fit-content; right:0;">
+        <button class="btn ml-2 mr-1 f20 text-light d-sm-block d-none account" data-toggle="tooltip" title="Account">
             <span class="d-flex align-items-center"><i class="fas fa-user"></i><span
                     class="f15 ml-2"><?php echo $_SESSION['NAME']; ?></span></span>
         </button>
