@@ -1,4 +1,7 @@
 /* The sidepanel menu */
+#mySidepanel {
+  z-index: 1032;
+}
 .sidepanel {
   height: 100%; /* Specify a height */
   width: 0; /* 0 width - change this with JavaScript */

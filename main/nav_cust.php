@@ -6,7 +6,7 @@
     <a href="/Kato/Orders"><i class="fas fa-shopping-bag"></i> Orders</a>
     <a href="#" class="text-danger logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
 </div>
-<nav class="navbar navbar-expand-sm bg-dark p-1 row m-0">
+<nav class="navbar navbar-expand-sm bg-dark p-1 row m-0 fixed-top">
     <div class="col-sm-3 col-12" style="display: contents;">
         <button onclick="openNav()" class="btn border border-light ml-1 mr-1">
             <i class="fas fa-sliders-h logocolor"></i>

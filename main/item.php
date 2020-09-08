@@ -4,8 +4,7 @@ $arr  = explode("/", $router);
 // echo $arr[2];
 $imageUrl = $baseUrl . "/product.png";
 ?>
-<div class="container p-0 row m-auto w-auto d-flex justify-content-center"
-    style="height: 84vh;overflow-y:auto;overflow-x:hidden">
+<div class="container p-0 row m-auto w-auto d-flex justify-content-center mt110">
     <div class="col-md-4 p-3">
         <img class="m-2 w-100 max300" src=<?php echo $imageUrl; ?> alt="Product Image">
         <br>
@@ -20,7 +19,7 @@ $imageUrl = $baseUrl . "/product.png";
             <b class="text-success f20">In Stock</b>
             <hr class="w-100">
             <h4>Product Description</h4>
-            <p class="text-left maxh300 m-0" style="overflow-y: auto;">Lorem ipsum dolor sit amet consectetur
+            <p class="text-left maxh300" style="overflow-y: auto;">Lorem ipsum dolor sit amet consectetur
                 adipisicing
                 elit. Officia, nisi.
                 Accusamus
