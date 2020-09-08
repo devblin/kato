@@ -7,6 +7,10 @@ $role = $_SESSION['ROLE'];
 #logo {
     display: none;
 }
+
+html {
+    overflow-y: hidden;
+}
 </style>
 <div class="container-fluid text-center p-0">
     <?php
