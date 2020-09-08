@@ -1,4 +1,4 @@
-<div class="container p-0 row ml-auto mr-auto w-auto d-flex justify-content-center mt110">
+<div class="container p-0 row ml-auto mr-auto mb-5 w-auto d-flex justify-content-center mt110">
     <div class="bg-light col-sm-auto  p-0 max250">
         <div data-item=1 class="bg-dark m-2 p-2 text-light">
             <img class="itemimg" src="product1.jpg" alt="Product">

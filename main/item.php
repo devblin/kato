@@ -4,7 +4,7 @@ $arr  = explode("/", $router);
 // echo $arr[2];
 $imageUrl = $baseUrl . "/product.png";
 ?>
-<div class="container p-0 row m-auto w-auto d-flex justify-content-center mt110">
+<div class="container p-0 row mb-5 ml-auto mr-auto w-auto d-flex justify-content-center mt110">
     <div class="col-md-4 p-3">
         <img class="m-2 w-100 max300" src=<?php echo $imageUrl; ?> alt="Product Image">
         <br>
