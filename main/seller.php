@@ -1,4 +1,4 @@
-<div class="container p-0 ml-auto mr-auto mb-5 w-auto mt110">
+<div class="container p-0 ml-auto mr-auto mb-5 w-auto mt110" style="height: 80vh;">
     <h1>Your dashboard</h1>
     <br>
     <div class="row m-auto d-flex justify-content-center" style="height:44vh">
