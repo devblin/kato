@@ -82,6 +82,13 @@ $router = str_replace($dir, "", $router);
         }
     }
     ?>
+    <!-- <footer class="bg-dark p-4 text-light">
+        <p>&copy; devblin | Deepanshu Dhruw</p>
+        <p>&reg; Kato&trade;</p>
+        <p><a href="#"><i class="fab fa-linkedin-in m-1"></i></a> <a href="#"><i class="m-1 fab fa-github"></i></a> <a
+                href="#"><i class="m-1 fas fa-meteor"></i></a>
+        </p>
+    </footer> -->
 </body>
 
 </html>
