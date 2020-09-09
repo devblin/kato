@@ -1,4 +1,4 @@
-<div class="container p-0 mb-5 w-auto mt110 " style="height: 105vh;">
+<div class="container p-0 mb-5 w-auto mt110">
     <h2 class="logodcolor">New Item</h2>
     <hr class="w-100">
     <div class="row d-flex justify-content-center w-auto m-0">
