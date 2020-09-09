@@ -68,6 +68,11 @@ $router = str_replace($dir, "", $router);
     } else {
         switch ($router) {
             case "/":
+            case "/Account":
+            case "/Inventory":
+            case "/Statistics":
+            case "/Sales":
+            case "/NewItem":
             case (preg_match("/Item\/[a-zA-Z0-9]/i", $router) ? true : false):
                 include(__DIR__ . "/main/home.php");
                 break;

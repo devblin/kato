@@ -3,7 +3,7 @@
     <br>
     <div class="row m-auto d-flex justify-content-center" style="height:44vh">
         <div class="bg-light col-6 p-2 max250 maxh250">
-            <button class="btn btn-primary additem w-100 h-100 f20">+ Add Item</button>
+            <button class="btn btn-primary newitem w-100 h-100 f20">+ Add New Item</button>
         </div>
         <div class="bg-light col-6 p-2 max250 maxh250">
             <button class="btn btn-warning inventory w-100 h-100 f20">Inventory</button>
@@ -16,3 +16,4 @@
         </div>
     </div>
 </div>
+<script src=<?php echo $baseUrl . "/cssandjs/js/seller.js"; ?>></script>

@@ -16,9 +16,21 @@ html {
     <?php
     if ($role == "Seller") {
         require __DIR__ . "/nav_seller.php";
-        require __DIR__ . "/seller.php";
+
+        if ($router == "/") {
+            require __DIR__ . "/seller.php";
+        } else if ($router == "/Inventory") {
+            require __DIR__ . "/inventory.php";
+        } else if ($router == "/NewItem") {
+            require __DIR__ . "/new_item.php";
+        } else if ($router == "/Sales") {
+            require __DIR__ . "/sales.php";
+        } else if ($router == "/Statistics") {
+            require __DIR__ . "/statistics.php";
+        }
     } else if ($role == "Buyer") {
         require __DIR__ . "/nav_cust.php";
+
         if ($router == "/") {
             require __DIR__ . "/customer.php";
         } else if (preg_match("/Item\/[a-zA-Z0-9]/i", $router)) {
