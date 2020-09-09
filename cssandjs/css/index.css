@@ -31,6 +31,9 @@ body {
 .max250 {
   max-width: 250px;
 }
+.maxh250 {
+  max-height: 250px;
+}
 .f70 {
   font-size: 70px;
 }
