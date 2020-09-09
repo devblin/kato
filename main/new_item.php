@@ -3,7 +3,7 @@
     <hr class="w-100">
     <div class="row d-flex justify-content-center w-auto m-0">
         <div class="col-sm-7 col-md-5">
-            <img id="previewimage" class="w-100 max250" alt="Default Image"><br>
+            <img id="previewimage" class="w-100 max250 maxh250" style="object-fit: cover;" alt="Default Image"><br>
             <input type="file" id="choosefile" style="display: none;">
             <button id="chooseimage" class="btn btn-primary m-1">Choose Image</button>
             <button id="uploadimage" class="btn btn-warning m-1">Upload</button>
