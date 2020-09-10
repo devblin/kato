@@ -8,8 +8,8 @@
 </div>
 <nav class="navbar navbar-expand-sm bg-dark p-1 row m-0 fixed-top">
     <div class="col-sm-3 col-12" style="display: contents;">
-        <button onclick="openNav()" class="btn border border-light ml-1 mr-1">
-            <i class="fas fa-sliders-h logocolor"></i>
+        <button class="opensidebar btn border border-light ml-1 mr-1">
+            <i class="opensidebar fas fa-sliders-h logocolor"></i>
         </button>
         <a class="navbar-brand text-center" href=<?php echo $homeUrl; ?>>
             <h2 class="logocolor pl-2"><i class="fas fa-shopping-cart" id="logoi"></i> Kato</h2>
