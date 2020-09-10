@@ -12,7 +12,7 @@ html {
     overflow-y: hidden;
 }
 </style>
-<div class="container-fluid text-center p-0 h-100" style="overflow-y: scroll;">
+<div class="container-fluid text-center p-0 h-100 main0" style="overflow-y: scroll;">
     <?php
     if ($role == "Seller") {
         require __DIR__ . "/nav_seller.php";
@@ -44,5 +44,13 @@ html {
 let logoutBtn = $(".logout");
 logoutBtn.click(function() {
     window.location = baseUrl + "/user/logout.php";
+});
+$(".main0").click(function(e) {
+    if (e.target.classList[0] == "opensidebar" || e.target.classList[0] == "sidepanel" || e.target.tagName ==
+        "H3") {
+        openNav();
+    } else if (e.target.classList[0] == "closebtn" != e.target.classList[0] != "opensidebar") {
+        closeNav();
+    }
 });
 </script>
