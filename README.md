@@ -24,9 +24,9 @@
 - [x] Login and Register
 - [x] Username and Password Validation
 - [x] Authentication
-- [ ] Dashboard
+- [x] Dashboard
 - [ ] Adding Items to Cart
 - [ ] Handle Storage
-- [ ] Search Bar
+- [x] Search Bar
 - [ ] Purchase History
 - [ ] Statistics
