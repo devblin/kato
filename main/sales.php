@@ -38,7 +38,6 @@ class Sales {
             whileAuth("#salesdetails", false, "");
             if (Array.isArray(newData)) {
                 $.each(newData, (key, value) => {
-                    console.log(value);
                     var total = value.PRICE * value.SQTY;
                     this.rowAppend(value.IMAGE, value.NAME, value.EMAIL, value.SQTY, total, value
                         .STAMP);

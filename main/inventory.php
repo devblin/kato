@@ -185,11 +185,7 @@ class getInventory {
         var beforeSend = () => whileAuth(".testbtn", true, smallSpinner);
         var success = (data) => {
             whileAuth(".testbtn", false, "Update");
-
             alertMsg.showAlert("Item Update Successfull", "success");
-            // } else {
-            console.log(data);
-            // }
         }
         sendAjax(this.url, "POST", formData, false, false, beforeSend, success);
     }
@@ -239,7 +235,6 @@ $(document).on("click", ".testbtn", function() {
     this.arr = [$("#upitemname").val(), $("#upitemcat").val(), $("#upitemprice").val(), $("#upitemqty").val(),
         $("#upitemdesc").val()
     ]
-    console.log("CLICLKING UPDATE");
     this.id = $(".closepopupdate").attr("data-item");
     if (ifEmpty(this.arr, "", null) && this.img != this.defaultUrl) {
         this.img = this.img.replace(baseUrl + "/products/", "");
@@ -249,7 +244,7 @@ $(document).on("click", ".testbtn", function() {
     } else if (this.img == this.defaultUrl) {
         alertMsg.showAlert("Choose an image", "warning");
     } else {
-        console.log("NULl");
+        alertMsg.showAlert("Some Field(s) Empty", "danger");
     }
 });
 
@@ -277,7 +272,6 @@ $(document).on("dblclick", "tr", function(e) {
     this.value = $(this).attr("data-item");
     $(".closepopupdate").attr("data-item", this.value);
     this.targ = e.target.classList[0];
-    console.log(this.targ);
     if (this.targ == "p-1") {
         $("#popupdate").addClass("d-flex");
         $("#uphead").html("Update: Item-" + this.value);

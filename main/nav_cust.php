@@ -1,6 +1,7 @@
 <div id="mySidepanel" class="sidepanel">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <h3 class="text-light sidebarintro">Welcome, <?php echo $_SESSION['NAME']; ?></h3>
+    <a href="/Kato"><i class="fas fa-home"></i> Home</a>
     <a href="/Kato/Account"><i class="fas fa-user"></i> Account</a>
     <a href="/Kato/Cart"><i class="fas fa-cart-arrow-down"></i> Cart</a>
     <a href="/Kato/Orders"><i class="fas fa-shopping-bag"></i> Orders</a>
