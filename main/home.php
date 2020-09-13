@@ -29,6 +29,8 @@ html {
             require __DIR__ . "/statistics.php";
         } else if (preg_match("/EditItem\/[a-zA-Z0-9]/i", $router)) {
             require __DIR__ . "/new_item.php";
+        } else if ($router == "/Account") {
+            require __DIR__ . "/account.php";
         }
     } else if ($role == "Buyer") {
         require __DIR__ . "/nav_cust.php";
@@ -41,6 +43,8 @@ html {
             require __DIR__ . "/orders.php";
         } else if ($router == "/Cart") {
             require __DIR__ . "/cart.php";
+        } else if ($router == "/Account") {
+            require __DIR__ . "/account.php";
         }
     }
     ?>

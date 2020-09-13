@@ -6,7 +6,8 @@
     position: absolute;
 }
 </style>
-<div id="popupdate" class="d-none flex-column justify-content-center align-items-center">
+<div data-toggle='tooltip' title='Double Click to Close' id="popupdate"
+    class="d-none flex-column justify-content-center align-items-center">
     <h3 id="uphead" class="logocolor">Update Item:2</h3>
     <hr class="logobgcolor w-100">
     <div class="closepopupdate row d-flex justify-content-center w-100" style="overflow-y: scroll;max-height: 480px;">
@@ -95,7 +96,7 @@ $(document).on("click", ".close", function() {
 });
 
 function tableRowAppend(id, name, type, price, qty, iClass) {
-    var val = "<tr class=" + iClass + " data-item=" + id + ">" +
+    var val = "<tr data-toggle='tooltip' title='Double Click to Edit' class=" + iClass + " data-item=" + id + ">" +
         "<td class='p-1'>" + id + "</td>" +
         "<td class='p-1'>" + name + "</td>" +
         "<td class='p-1'>" + type + "</td>" +
@@ -144,6 +145,7 @@ class getInventory {
             } else {
                 inventLoad.html("<h3>Empty Inventory</h3>");
             }
+            $('[data-toggle="tooltip"]').tooltip();
         }
 
         sendAjaxNew(this.url, "POST", data, beforeSend, success);
