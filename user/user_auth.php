@@ -1,6 +1,7 @@
 <?php
 require __DIR__ . "/../setup/connection.php";
 require __DIR__ . "/../functions/mysql_func.php";
+
 if (isset($_POST['login'])) {
     $user = $_POST['username'];
     $pwd = $_POST['userpwd'];

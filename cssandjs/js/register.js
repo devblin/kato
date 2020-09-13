@@ -28,7 +28,7 @@ class Validation {
             validType[this.type] = false;
           }
         };
-        sendAjax(urlReg, "POST", data, beforeSend, success);
+        sendAjaxNew(urlReg, "POST", data, beforeSend, success);
       } else {
         showInfo(this.patternmsg, true);
       }
@@ -38,7 +38,7 @@ class Validation {
   }
 }
 
-$("#newuname").on("input", function () {
+$("#newuname").on("input", function() {
   var val = $(this).val();
   var newUname = new Validation(
     "Username must have minimum 3 and no special characters",
@@ -51,7 +51,7 @@ $("#newuname").on("input", function () {
   newUname.validate();
 });
 
-$("#newemail").on("input", function () {
+$("#newemail").on("input", function() {
   var val = $(this).val();
   var newEmail = new Validation(
     "Email format invalid",
@@ -64,7 +64,7 @@ $("#newemail").on("input", function () {
   newEmail.validate();
 });
 
-$("#showpwd").click(function () {
+$("#showpwd").click(function() {
   if ($(".pwds").attr("type") == "text") {
     $(".pwds").attr("type", "password");
     $(this).removeClass("fa-eye-slash");
@@ -76,7 +76,7 @@ $("#showpwd").click(function () {
   }
 });
 
-$(document).on("input", ".pwds", function () {
+$(document).on("input", ".pwds", function() {
   var regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{4,}$/;
   var newPwd = $("#newpwd").val();
   var newCpwd = $("#newcpwd").val();
@@ -124,7 +124,7 @@ registerBtn.click(e => {
   };
 
   if (ifEmpty(data, "", null) && ifEmpty(validType, false, false)) {
-    sendAjax(urlReg, "POST", data, beforeSend, success);
+    sendAjaxNew(urlReg, "POST", data, beforeSend, success);
   } else if (ifEmpty(validType, true, true)) {
     showInfo("Check Username/Password/E-Mail", true);
   } else {

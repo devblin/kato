@@ -1,9 +1,11 @@
 <div id="mySidepanel" class="sidepanel">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <h3 class="text-light">Welcome, <?php echo $_SESSION['NAME']; ?></h3>
-    <a href="#"><i class="fas fa-user account"></i> Account</a>
-    <a href="#"><i class="fas fa-warehouse"></i> Inventory</a>
-    <a href="#"><i class="fas fa-chart-bar"></i> Sales Statistics</a>
+    <h3 class="text-light sidebarintro">Welcome, <?php echo $_SESSION['NAME']; ?></h3>
+    <a href="/Kato"><i class="fas fa-home"></i> Home</a>
+    <a href="/Kato/Account"><i class="fas fa-user account"></i> Account</a>
+    <a href="/Kato/Sales"><i class="fas fa-scroll"></i> Sales</a>
+    <a href="/Kato/Inventory"><i class="fas fa-warehouse"></i> Inventory</a>
+    <a href="/Kato/Statistics"><i class="fas fa-chart-bar"></i> Sales Statistics</a>
     <a href="#" class="text-danger logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
 </div>
 <nav class="navbar navbar-expand-sm bg-dark p-1 row m-0 fixed-top">
@@ -23,10 +25,16 @@
             <span class="d-flex align-items-center"><i class="fas fa-user"></i><span
                     class="f15 ml-2"><?php echo $_SESSION['NAME']; ?></span></span>
         </button>
-        <button class="btn ml-1 mr-1 f20 text-light d-sm-block d-none" data-toggle="tooltip" title="Inventory">
+        <button id="gotosale" class="btn ml-1 mr-1 f20 text-light d-sm-block d-none" data-toggle="tooltip"
+            title="Sales">
+            <i class="fas fa-scroll"></i>
+        </button>
+        <button id="inventgo" class="btn ml-1 mr-1 f20 text-light d-sm-block d-none" data-toggle="tooltip"
+            title="Inventory">
             <i class="fas fa-warehouse"></i>
         </button>
-        <button class="btn ml-1 mr-1 f20 text-light d-sm-block d-none" data-toggle="tooltip" title="Sales Statistics">
+        <button id="gotostats" class="btn ml-1 mr-1 f20 text-light d-sm-block d-none" data-toggle="tooltip"
+            title="Sales Statistics">
             <i class="fas fa-chart-bar"></i>
         </button>
         <button class="btn ml-1 mr-1 f20 text-light d-sm-block d-none logout" data-toggle="tooltip" title="Logout">
@@ -34,3 +42,14 @@
         </button>
     </div>
 </nav>
+<script>
+$("#inventgo").click(function() {
+    window.location = baseUrl + "/Inventory";
+});
+$("#gotostats").click(function() {
+    window.location = baseUrl + "/Statistics";
+});
+$("#gotosale").click(function() {
+    window.location = baseUrl + "/Sales";
+});
+</script>

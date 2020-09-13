@@ -10,6 +10,7 @@ function opData($sql0, $bindtyp, $bindval)
     $stmt->bind_param($bindtyp, ...$bindval);
     $stmt->execute();
 }
+
 function getArray($sql0, $bindtyp, $bindval)
 {
     global $conn;

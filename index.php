@@ -21,7 +21,7 @@ $router = str_replace($dir, "", $router);
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://kit.fontawesome.com/70ccd1e73b.js" crossorigin="anonymous"></script>
     <script src=<?php echo $baseUrl . "/cssandjs/js/nav.js"; ?>></script>
-    <link rel="shortcut icon" href="katologo.jpeg" type="image/x-icon">
+    <link rel="shortcut icon" href="/katologo.jpeg" type="image/x-icon">
     <link rel="stylesheet" href=<?php echo  $baseUrl . "/cssandjs/css/index.css"; ?>>
     <link rel="stylesheet" href=<?php echo $baseUrl . "/cssandjs/css/nav.css"; ?>>
 </head>
@@ -68,11 +68,15 @@ $router = str_replace($dir, "", $router);
     } else {
         switch ($router) {
             case "/":
+            case (preg_match("/\/[a-zA-Z0-9]/i", $router) ? true : false):
             case "/Account":
             case "/Inventory":
             case "/Statistics":
             case "/Sales":
             case "/NewItem":
+            case "/Orders":
+            case "/Cart":
+            case (preg_match("/EditItem\/[a-zA-Z0-9]/i", $router) ? true : false):
             case (preg_match("/Item\/[a-zA-Z0-9]/i", $router) ? true : false):
                 include(__DIR__ . "/main/home.php");
                 break;
