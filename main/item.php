@@ -64,7 +64,7 @@ class Item {
         var beforeSend = () => whileAuth("citemcart", true, smallSpinner);
         var success = (data) => {
             whileAuth("citemcart", false, "+ Cart");
-            console.log(data);
+            // console.log(data);
             if (data == "added") {
                 $("#citemcart").removeClass("btn-warning").addClass("btn-danger").html("- Cart");
             } else {

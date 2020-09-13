@@ -57,9 +57,7 @@ class MainContent {
         var beforeSend = () => whileAuth("main-itemloader", false, defaultSpinner + " Please Wait...");
         var success = (data) => {
             ////////////////////////
-            console.log(data);
             var newData = JSON.parse(data);
-            console.log(newData == null);
             whileAuth("main-itemloader", false, "");
 
             $.each(newData, (key, value) => {
@@ -73,12 +71,14 @@ class MainContent {
             });
             //////////////////////////////
             if ((category != "" || specific != "") && newData != null) {
-                $("#itemlists").prepend("<h5 class='col-12'>Search results for " + category + ", " + specific +
+                $("#itemlists").prepend("<h5 class='col-12'><i class='fas fa-search'></i> Search results for " +
+                    category + ", " + specific +
                     "</h5>");
             } else if ((category == "" && specific == "") && newData != null) {
                 $("#itemlists").prepend("");
             } else {
-                $("#itemlists").prepend("<h5 class='col-12'>No results for " + category + ", " + specific +
+                $("#itemlists").prepend("<h5 class='col-12'><i class='fas fa-search'></i> No results for " +
+                    category + ", " + specific +
                     "</h5>");
             }
             /////////////////////////////////
@@ -94,11 +94,7 @@ $(document).ready(function() {
     catVal = catVal.replace("%20", " ");
     var specVal = $("#specvalue").val();
     specVal = specVal.replace("%20", " ");
-
     newItemList.getData(catVal, specVal);
-
-    console.log(catVal);
-    console.log(specVal);
 });
 
 $(document).on("click", ".itemimg", function() {

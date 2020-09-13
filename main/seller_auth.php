@@ -105,10 +105,25 @@ if (isset($_SESSION['ID'])) {
             $sendData = json_encode($sendData);
             echo $sendData;
         }
+    } else if (isset($_POST['accdetails'])) {
+        $sql = "SELECT * FROM users WHERE ID=?";
+        $data = getArray($sql, "i", array($currentUserId));
+        $data = json_encode($data);
+        echo $data;
     } else if (isset($_POST['updateacc'])) {
-        $sql = "UPDATE users SET EMAIL=? WHERE ID=?";
-        opData($sql, "i", array($currentUserId));
-        echo 1;
+        $newEmail  = $_POST['newemail'];
+        $sql = "SELECT * FROM users WHERE EMAIL=?";
+        $check = checkData($sql, "s", array($newEmail));
+        $checkId = getData($sql, "s", array($newEmail), "ID");
+        if ($check == 0) {
+            $sql = "UPDATE users SET EMAIL=? WHERE ID=?";
+            opData($sql, "si", array($newEmail, $currentUserId));
+            echo "success";
+        } else if ($currentUserId == $checkId) {
+            echo "same";
+        } else {
+            echo "no";
+        }
     }
 }
 function weekOfMonth($strDate)
