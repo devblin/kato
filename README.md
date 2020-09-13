@@ -10,7 +10,7 @@
 #### 2. Import `kato.sql` file.
 #### 2. Go to BASE_URL to run.
 
-## Technologies Used
+## Technologies/Languages Used
 
 - PHP
 - HTML, CSS, JavaScript
