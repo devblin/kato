@@ -183,7 +183,7 @@ class getInventory {
         var beforeSend = () => whileAuth(".testbtn", true, smallSpinner);
         var success = (data) => {
             whileAuth(".testbtn", false, "Update");
-            // if (data == 1) {
+
             alertMsg.showAlert("Item Update Successfull", "success");
             // } else {
             console.log(data);

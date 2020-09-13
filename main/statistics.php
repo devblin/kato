@@ -4,7 +4,7 @@
 
     <div id="weekgraph" class="mb-2">
     </div>
-    <h5><b>Daily Sales</b></h5>
+    <h5><b>Weekly Sales (September)</b></h5>
     <hr class="w-100 logobgcolor">
 </div>
 <script>

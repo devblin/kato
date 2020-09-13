@@ -77,10 +77,10 @@ if (isset($_SESSION['ID'])) {
         $sql  = "SELECT * FROM sales WHERE SSELLER=?";
         $data = getArray($sql, "i", array($currentUserId));
         if (is_array($data)) {
-            $week = 0;
-            $sendData = array();
-            $sendData[$week][0] = 0;
-            $sendData[$week][1] = 0;
+            // $week = 0;
+            // $sendData = array();
+            // $sendData[$week][0] = 0;
+            // $sendData[$week][1] = 0;
             for ($i = 0; $i < count($data); $i++) {
                 $dateArr = explode(" ", $data[$i]['STAMP']);
                 $date = $dateArr[0];
@@ -89,10 +89,14 @@ if (isset($_SESSION['ID'])) {
                 $cDate = weekOfMonth($cDate);
 
                 $week = $cDate - $date;
+                if ($week < 0) {
+                    $week  = -1 * $week;
+                }
                 $newQty = $data[$i]['SQTY'];
                 $sql0 = "SELECT * FROM products WHERE PID=?";
                 $newPrice = getData($sql0, "i", array($data[$i]['SITEMID']), "PPRICE");
                 $totalPrice =  intval($newPrice) * intval($newQty);
+
                 if ($i == $week) {
                     $sendData[$week][0] = $newQty;
                     $sendData[$week][1] = $totalPrice;
