@@ -1,6 +1,6 @@
 <div id="mySidepanel" class="sidepanel">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <h3 class="text-light">Welcome, <?php echo $_SESSION['NAME']; ?></h3>
+    <h3 class="text-light sidebarintro">Welcome, <?php echo $_SESSION['NAME']; ?></h3>
     <a href="#"><i class="fas fa-user account"></i> Account</a>
     <a href="#"><i class="fas fa-warehouse"></i> Inventory</a>
     <a href="#"><i class="fas fa-chart-bar"></i> Sales Statistics</a>

@@ -1,6 +1,6 @@
 <div id="mySidepanel" class="sidepanel">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <h3 class="text-light">Welcome, <?php echo $_SESSION['NAME']; ?></h3>
+    <h3 class="text-light sidebarintro">Welcome, <?php echo $_SESSION['NAME']; ?></h3>
     <a href="/Kato/Account"><i class="fas fa-user"></i> Account</a>
     <a href="/Kato/Cart"><i class="fas fa-cart-arrow-down"></i> Cart</a>
     <a href="/Kato/Orders"><i class="fas fa-shopping-bag"></i> Orders</a>
@@ -24,16 +24,20 @@
                 <select id="category" class="btn btn-outline-secondary text-light bg-dark" data-toggle="tooltip"
                     title="Category">
                     <option value="All Categories" selected>All Categories</option>
-                    <option value="Clothes">Clothes</option>
                     <option value="Books">Books</option>
+                    <option value="Clothes">Clothes</option>
                     <option value="Electronics">Electronics</option>
                     <option value="Software">Software</option>
+                    <option value="Skin Care">Skin Care</option>
+                    <option value="Watches">Watches</option>
                     <option value="Grocery">Grocery</option>
+                    <option value="Sports">Sports</option>
+                    <option value="Baggage">Baggage</option>
                 </select>
             </div>
-            <input type="text" class="form-control" placeholder="Search">
+            <input id="searcharea" type="text" class="form-control" placeholder="Search">
             <div class="input-group-append">
-                <button class="btn  logobgcolor text-light" data-toggle="tooltip" title="Search"><i
+                <button id="searchbtn" class="btn logobgcolor text-light" data-toggle="tooltip" title="Search"><i
                         class="fas fa-search"></i></button>
             </div>
         </div>
@@ -52,3 +56,10 @@
         </button>
     </div>
 </nav>
+<script>
+$("#searchbtn").click(function() {
+    var category = $("#category").val();
+    var specific = $("#searcharea").val();
+    window.location.href = baseUrl + "/Search/" + category + "/" + specific;
+});
+</script>

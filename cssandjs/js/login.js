@@ -12,11 +12,12 @@ loginBtn.click(e => {
       userpwd: userPwd.val()
     };
 
-    var beforeSend = function () {
+    var beforeSend = function() {
       whileAuth("login", true, smallSpinner);
     };
 
-    var success = function (data) {
+    var success = function(data) {
+      console.log(data);
       if (data == 1) {
         window.location = baseUrl;
       } else if (data == 0) {
@@ -26,8 +27,8 @@ loginBtn.click(e => {
       }
       whileAuth("login", false, "Login");
     };
-
-    sendAjax(url, "POST", data, beforeSend, success);
+    console.log(url);
+    sendAjaxNew(url, "POST", data, beforeSend, success);
   } else {
     showInfo("Username/Password field empty!", true);
     console.log("EMPTY");
