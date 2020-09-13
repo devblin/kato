@@ -1,9 +1,8 @@
 <?php
 $arr  = explode("/", $router);
-// print_r($arr);
-// echo $arr[2];
 $imageUrl = $baseUrl . "/product.png";
 ?>
+
 <input type="hidden" class="itemid" value=<?php echo $arr[2]; ?>>
 
 <div id="iteminfo" class="container p-0 row mb-5 ml-auto mr-auto w-auto d-flex justify-content-center mt110">
@@ -11,22 +10,32 @@ $imageUrl = $baseUrl . "/product.png";
         <button type="button" class="close">&times;</button>
         <strong class="alert-msg"></strong>
     </div>
-    <div class="itemid col-md-4 p-3">
+    <div class="itemid col-md-5 p-3"
+        style="display: flex;flex-direction: column;align-items: center;justify-content: center;">
         <img id="citemimg" class="m-2 w-100 max300" src=<?php echo $imageUrl; ?> alt="Product Image">
         <br>
-        <button id="citembuy" class="btn btn-success">Buy</button>
-        <button id="citemcart" class="btn">+ Cart</button>
-        <input id="citemqty" type="number" class="form-control m-1" placeholder="Quantity" min="1">
+        <div>
+            <button id="citembuy" class="btn btn-success m-1 w-auto"><i class="fas fa-shopping-bag"></i> Buy</button>
+            <button id="citemcart" class="btn m-1 auto">+ Cart</button>
+            <input id="citemqty" type="number" class="form-control m-1 border border-danger" placeholder="Quantity"
+                min="1">
+        </div>
     </div>
-    <div class="itemid col-md-8 p-3">
+    <div class="itemid col-md-6 p-3">
         <h2 id="citemname" class="m-2"></h2>
         <hr class="w-100">
         <div class="d-flex flex-column align-items-baseline">
-            <b class="f15 mb-1">Product Category: <span id="citemcat" class="text-info">Software</span></b>
+            <b class="f18 mb-2"><i class="fas fa-server"></i> Product Category: <span id="citemcat"
+                    class="text-info">Software</span></b>
+            <b class="f18 mb-1"><i class="fas fa-hand-holding-usd"></i> Sold By: <span id="citemseller"
+                    class="text-primary"></span></b>
+            <b class="f18 mb-1"><i class="fas fa-address-card"></i> Seller Contact: <span id="citemcontact"
+                    class="text-primary"></span></b>
+            <hr class="w-100">
             <b class="text-primary f20 mb-1"><i class='fas fa-tag'></i> <span id="citemprice"></span></b>
             <b id="citemstock" class="f20"></b>
             <hr class="w-100">
-            <h4>Product Description</h4>
+            <h4><i class="fas fa-info-circle"></i> Product Description</h4>
             <p id="citemdesc" class="text-left maxh300" style="overflow-y: auto;"></p>
         </div>
     </div>
@@ -80,13 +89,16 @@ class Item {
             $("#citemimg").attr("src", imgUrl);
             $("#citemname").html(newData[0].PNAME);
             $("#citemdesc").html(newData[0].PDESC);
-            $("#citemprice").html(newData[0].PPRICE);
+            $("#citemprice").html("Rs. " + newData[0].PPRICE);
             $("#citemcat").html(newData[0].PTYPE);
-
+            $("#citemseller").html(newData[0].SELLER);
+            $("#citemcontact").html(newData[0].CONTACT);
             if (newData[0].PQTY == 0) {
-                $("#citemstock").html("Out of Stock").addClass("text-danger");
+                $("#citemstock").html("<i class='fab fa-stack-overflow'></i> Out of Stock").addClass(
+                    "text-danger");
             } else {
-                $("#citemstock").html("In Stock : " + newData[0].PQTY).addClass("text-success");
+                $("#citemstock").html("<i class='fas fa-layer-group'></i> In Stock : " + newData[0].PQTY)
+                    .addClass("text-success");
             }
             /////////////////////////////
         }

@@ -77,10 +77,6 @@ if (isset($_SESSION['ID'])) {
         $sql  = "SELECT * FROM sales WHERE SSELLER=?";
         $data = getArray($sql, "i", array($currentUserId));
         if (is_array($data)) {
-            // $week = 0;
-            // $sendData = array();
-            // $sendData[$week][0] = 0;
-            // $sendData[$week][1] = 0;
             for ($i = 0; $i < count($data); $i++) {
                 $dateArr = explode(" ", $data[$i]['STAMP']);
                 $date = $dateArr[0];
@@ -109,6 +105,10 @@ if (isset($_SESSION['ID'])) {
             $sendData = json_encode($sendData);
             echo $sendData;
         }
+    } else if (isset($_POST['updateacc'])) {
+        $sql = "UPDATE users SET EMAIL=? WHERE ID=?";
+        opData($sql, "i", array($currentUserId));
+        echo 1;
     }
 }
 function weekOfMonth($strDate)

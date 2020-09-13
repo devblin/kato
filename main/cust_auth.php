@@ -20,6 +20,12 @@ if (isset($_POST["itemadd"])) {
     $item = $_POST['itemid'];
     $sql = "SELECT * FROM products WHERE PID=?";
     $data = getArray($sql, "i", array($item));
+    $sql0 = "SELECT * FROM users WHERE ID=?";
+    $seller = getData($sql0, "i", array($data[0]['PSELLER']), 'NAME');
+    $sellerEmail  = getData($sql0, "i", array($data[0]['PSELLER']), 'EMAIL');
+
+    $data[0]['SELLER'] = $seller;
+    $data[0]['CONTACT'] = $sellerEmail;
     $data = json_encode($data);
     echo $data;
 } else if (isset($_POST['main-getallitems'])) {
