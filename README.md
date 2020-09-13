@@ -17,7 +17,6 @@
 - jQuery
 - Bootstrap
 - AJAX
-- Server Side Events
 
 ## Tasks
 
@@ -25,8 +24,8 @@
 - [x] Username and Password Validation
 - [x] Authentication
 - [x] Dashboard
-- [ ] Adding Items to Cart
-- [ ] Handle Storage
+- [x] Adding Items to Cart
+- [x] Handle Storage
 - [x] Search Bar
-- [ ] Purchase History
-- [ ] Statistics
+- [x] Purchase History
+- [x] Statistics
