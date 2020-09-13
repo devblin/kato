@@ -1,10 +1,10 @@
 <div id="mySidepanel" class="sidepanel">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <h3 class="text-light sidebarintro">Welcome, <?php echo $_SESSION['NAME']; ?></h3>
-    <a href=<?php $baseUrl; ?>><i class="fas fa-home"></i> Home</a>
-    <a href=<?php $baseUrl . "/Account"; ?>><i class="fas fa-user"></i> Account</a>
-    <a href=<?php $baseUrl . "/Cart"; ?>><i class="fas fa-cart-arrow-down"></i> Cart</a>
-    <a href=<?php $baseUrl . "/Orders"; ?>><i class="fas fa-shopping-bag"></i> Orders</a>
+    <a href=<?php echo $baseUrl; ?>><i class="fas fa-home"></i> Home</a>
+    <a href=<?php echo $baseUrl . "/Account"; ?>><i class="fas fa-user"></i> Account</a>
+    <a href=<?php echo $baseUrl . "/Cart"; ?>><i class="fas fa-cart-arrow-down"></i> Cart</a>
+    <a href=<?php echo $baseUrl . "/Orders"; ?>><i class="fas fa-shopping-bag"></i> Orders</a>
     <a href="#" class="text-danger logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
 </div>
 <nav class="navbar navbar-expand-sm bg-dark p-1 row m-0 fixed-top">

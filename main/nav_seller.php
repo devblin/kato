@@ -1,11 +1,11 @@
 <div id="mySidepanel" class="sidepanel">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <h3 class="text-light sidebarintro">Welcome, <?php echo $_SESSION['NAME']; ?></h3>
-    <a href=<?php $baseUrl; ?>><i class="fas fa-home"></i> Home</a>
-    <a href=<?php $baseUrl . "/Account"; ?>><i class="fas fa-user account"></i> Account</a>
-    <a href=<?php $baseUrl . "/Sales"; ?>><i class="fas fa-scroll"></i> Sales</a>
-    <a href=<?php $baseUrl . "/Inventory"; ?>><i class="fas fa-warehouse"></i> Inventory</a>
-    <a href=<?php $baseUrl . "/Statistics"; ?>><i class="fas fa-chart-bar"></i> Sales Statistics</a>
+    <a href=<?php echo $baseUrl; ?>><i class="fas fa-home"></i> Home</a>
+    <a href=<?php echo $baseUrl . "/Account"; ?>><i class="fas fa-user account"></i> Account</a>
+    <a href=<?php echo $baseUrl . "/Sales"; ?>><i class="fas fa-scroll"></i> Sales</a>
+    <a href=<?php echo $baseUrl . "/Inventory"; ?>><i class="fas fa-warehouse"></i> Inventory</a>
+    <a href=<?php echo $baseUrl . "/Statistics"; ?>><i class="fas fa-chart-bar"></i> Sales Statistics</a>
     <a href="#" class="text-danger logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
 </div>
 <nav class="navbar navbar-expand-sm bg-dark p-1 row m-0 fixed-top">
