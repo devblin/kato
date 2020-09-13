@@ -77,6 +77,10 @@ if (isset($_SESSION['ID'])) {
         $sql  = "SELECT * FROM sales WHERE SSELLER=?";
         $data = getArray($sql, "i", array($currentUserId));
         if (is_array($data)) {
+            $week = 0;
+            $sendData = array();
+            $sendData[$week][0] = 0;
+            $sendData[$week][1] = 0;
             for ($i = 0; $i < count($data); $i++) {
                 $dateArr = explode(" ", $data[$i]['STAMP']);
                 $date = $dateArr[0];
@@ -84,19 +88,20 @@ if (isset($_SESSION['ID'])) {
                 $cDate = date("Y-m-d");
                 $cDate = weekOfMonth($cDate);
 
+                $week = $cDate - $date;
                 $newQty = $data[$i]['SQTY'];
                 $sql0 = "SELECT * FROM products WHERE PID=?";
                 $newPrice = getData($sql0, "i", array($data[$i]['SITEMID']), "PPRICE");
-
-                $week = $cDate - $date;
-                if ($i == 0) {
-                    $sendData[$week][0]  = $data[$i]['SQTY'];
-                    $sendData[$week][1] = intval($newPrice) * intval($newQty);
+                $totalPrice =  intval($newPrice) * intval($newQty);
+                if ($i == $week) {
+                    $sendData[$week][0] = $newQty;
+                    $sendData[$week][1] = $totalPrice;
                 } else {
-                    $sendData[$week][0] += $data[$i]['SQTY'];
-                    $sendData[$week][1] += intval($newPrice) * intval($newQty);
+                    $sendData[$week][0] += $newQty;
+                    $sendData[$week][1] += $totalPrice;
                 }
             }
+
             $sendData = json_encode($sendData);
             echo $sendData;
         }
