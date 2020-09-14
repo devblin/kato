@@ -153,16 +153,16 @@ $("#itemname").on("input", function(e) {
 confirmAddBtn.click(function(e) {
     var newItem = new addNewItem();
 
-    if (ifEmpty(newItem.itemarr, "", null)) {
+    if (ifEmpty(newItem.itemarr, "", null) && $("#itemqty").val() > 0) {
         if (previewImage.attr("src") != defaultImageUrl) {
             newItem.upload();
         } else {
             alertMsg.showAlert("Kindly, provide an item image", "danger");
-            console.log("%c Kindly, provide an item image", errorConsole);
         }
+    } else if ($("#itemqty").val() <= 0 || $("#itemprice").val() <= 0) {
+        alertMsg.showAlert("Price/Qty should be more than 0", "warning");
     } else {
         alertMsg.showAlert("Fill the details, Please !!!", "danger");
-        console.log("%c Fill the details, Please !!!", errorConsole);
     }
 });
 </script>
