@@ -7,6 +7,7 @@
 
 .progress {
     background-color: transparent !important;
+    border-radius: 0px !important;
 }
 
 .progress-bar {
@@ -42,7 +43,7 @@ class Stats {
         var val = "<div class='progress m-1' style='height:30px'>" +
             "<div data-toggle='tooltip' title='" + "Qty Sold: " + qty + " | " + "Amount: " + profit +
             " | Percentage: " + per + "%" +
-            "' class='progress-bar' style=" + width + ">Week - " + week + "</div></div>";
+            "' class='bg-info text-light progress-bar' style=" + width + ">Week - " + week + "</div></div>";
         $("#weekgraph").append(val);
     }
     getStats = (week, weekdate) => {
@@ -77,9 +78,6 @@ class Stats {
                 }
                 for (let j = 0; j < newData.length; j++) {
                     this.per = ((newData[j][1] * 100) / totalPrice).toFixed(2);
-                    if (this.per == 0 || this.per < 1) {
-                        this.per = 1;
-                    }
                     this.weekGraph(j + 1, this.per, "true", newData[j][0], newData[j]
                         [1], this.per);
                 }

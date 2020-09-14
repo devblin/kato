@@ -78,7 +78,7 @@ if (isset($_SESSION['ID'])) {
         $cDate = date("Y-m-d");
         if ($cDate >= $reqDate) {
             $reqDateMonth = explode("-", $reqDate);
-            $reqDateYear = $reqDateMonth[2];
+            $reqDateYear = $reqDateMonth[0];
             $reqDateMonth = $reqDateMonth[1];
 
             $reqDateWeek = weekOfMonth($reqDate);
@@ -91,7 +91,7 @@ if (isset($_SESSION['ID'])) {
                     $date = $dateArr[0];
 
                     $dateMonth = explode("-", $dateArr[0]);
-                    $dateYear = $dateMonth[2];
+                    $dateYear = $dateMonth[0];
                     $dateMonth = $dateMonth[1];
 
                     $dateWeek  = weekOfMonth($date);
