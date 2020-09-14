@@ -74,8 +74,8 @@ class Stats {
                     totalSale += newData[i][0];
                 }
                 for (let j = 0; j < newData.length; j++) {
-                    this.per = ((newData[j][0] * 100) / totalSale).toFixed(2);
-                    if (this.per == 0) {
+                    this.per = ((newData[j][1] * 100) / totalPrice).toFixed(2);
+                    if (this.per == 0 || this.per < 1) {
                         this.per = 1;
                     }
                     this.weekGraph(j + 1, this.per, "true", newData[j][0], newData[j]
