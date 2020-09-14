@@ -113,13 +113,12 @@ function readUrl(input, preview, choose) {
 
 function allZero(arr) {
   let len = arr.length;
-  let res = false;
+  let res = true;
   for (let i = 0; i < len; i++) {
     for (let j = 0; j < 2; j++) {
-      if (arr[i][j] == 0) {
-        res = true;
-      } else {
+      if (arr[i][j] != 0) {
         res = false;
+        break;
       }
     }
   }

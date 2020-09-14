@@ -59,6 +59,7 @@ class Stats {
 
             if (isJsonString(data)) {
                 var newData = JSON.parse(data);
+                console.log(newData);
             }
             if (data == "future") {
                 $("#weekgraph").html(this.noFuture);
