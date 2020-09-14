@@ -10,10 +10,11 @@
 <script>
 class Stats {
     url = baseUrl + "/main/seller_auth.php";
-    weekGraph = (week, sale, price, qty, profit) => {
+    weekGraph = (week, sale, price, qty, profit, per) => {
         var width = 'width:' + sale + "%;";
         var val = "<div class='progress m-1' style='height:30px'>" +
             "<div data-toggle='tooltip' title='" + "Qty Sold: " + qty + " | " + "Amount: " + profit +
+            " | Percentage: " + per + "%" +
             "' class='progress-bar' style=" + width + ">Week - " + week + "</div></div>";
         $("#weekgraph").append(val);
     }
@@ -36,8 +37,9 @@ class Stats {
                     totalSale += newData[i][0];
                 }
                 for (let i = 0; i < newData.length; i++) {
-                    this.weekGraph(i + 1, ((newData[i][0] * 100) / totalSale), "true", newData[i][0], newData[i]
-                        [1]);
+                    this.per = ((newData[i][0] * 100) / totalSale).toFixed(2);
+                    this.weekGraph(i + 1, this.per, "true", newData[i][0], newData[i]
+                        [1], this.per);
                 }
             }
             $('[data-toggle="tooltip"]').tooltip();

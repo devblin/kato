@@ -1,5 +1,4 @@
-<div class="container p-0 mb-3 w-auto mt110">
-
+<div class="container p-0 mb-3 w-auto " style="margin-top: 82px;">
     <h3 class="logodcolor itemname0">New Item</h3>
     <hr class="w-100">
     <div class="row d-flex justify-content-center w-auto m-0">
@@ -14,8 +13,8 @@
             <button id="chooseimage" class="btn btn-primary m-1">Choose Image</button>
             <button id="cancelimage" class="btn btn-danger m-1">Remove</button>
         </div>
+        <hr class="w-100">
         <div class="col-sm-6 col-lg-6 text-left">
-
             <div class="form-group mb-2">
                 <label class="mb-1"> Item Name</label>
                 <input id="itemname" type="text" class="form-control" placeholder="Enter Item Name" required>

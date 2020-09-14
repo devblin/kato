@@ -57,7 +57,7 @@ if (isset($_SESSION['ID'])) {
         }
         echo 1;
     } else if (isset($_POST['getsales'])) {
-        $sql = "SELECT * FROM sales WHERE SSELLER=?";
+        $sql = "SELECT * FROM sales WHERE SSELLER=? ORDER BY SID DESC";
         $data = getArray($sql, "i", array($currentUserId));
         if (is_array($data)) {
             for ($i = 0; $i < count($data); $i++) {
