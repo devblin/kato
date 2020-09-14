@@ -80,8 +80,8 @@ $(document).on("input", ".pwds", function() {
   var regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{4,}$/;
   var newPwd = $("#newpwd").val();
   var newCpwd = $("#newcpwd").val();
-  if (newPwd != "" && newCpwd != "") {
-    if (regex.test(newPwd) || regex.test(newCpwd)) {
+  if (newPwd != "") {
+    if (regex.test(newPwd)) {
       if (newPwd == newCpwd) {
         validType["PWDMATCH"] = true;
         showInfo("Passwords Match", false);
@@ -111,7 +111,7 @@ registerBtn.click(e => {
     newpwd: $("#newpwd").val()
   };
   var beforeSend = () => {
-    whileAuth("register", true, smallSpinner);
+    whileAuth("#register", true, smallSpinner);
   };
   var success = data => {
     if (data == 1) {
@@ -120,7 +120,7 @@ registerBtn.click(e => {
       console.log(data);
       showInfo("ERROR! Please Check Log for details", true);
     }
-    whileAuth("register", false, "Register");
+    whileAuth("#register", false, "Register");
   };
 
   if (ifEmpty(data, "", null) && ifEmpty(validType, false, false)) {

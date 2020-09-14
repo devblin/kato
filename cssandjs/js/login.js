@@ -13,7 +13,7 @@ loginBtn.click(e => {
     };
 
     var beforeSend = function() {
-      whileAuth("login", true, smallSpinner);
+      whileAuth("#login", true, smallSpinner);
     };
 
     var success = function(data) {
@@ -25,7 +25,7 @@ loginBtn.click(e => {
       } else {
         showInfo("Invalid Credentials", true);
       }
-      whileAuth("login", false, "Login");
+      whileAuth("#login", false, "Login");
     };
     console.log(url);
     sendAjaxNew(url, "POST", data, beforeSend, success);

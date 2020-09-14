@@ -33,6 +33,7 @@
                     <option class="itemcat0" value="Grocery">Grocery</option>
                     <option class="itemcat0" value="Sports">Sports</option>
                     <option class="itemcat0" value="Baggage">Baggage</option>
+                    <option class="itemcat0" value="Baggage">Baggage</option>
                 </select>
             </div>
             <div class="form-group mb-2">

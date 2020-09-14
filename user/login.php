@@ -20,11 +20,11 @@ echo "<title>Kato | Login</title>";
             </div>
             <input id="userpwd" type="password" class="form-control info" placeholder="Password" required>
         </div>
-        <div class="form-check text-left mb-1">
+        <!-- <div class="form-check text-left mb-1">
             <label class="form-check-label m-1">
                 <input id="rememberme" type="checkbox" class="form-check-input" value="rememberme"> Remember Me
             </label>
-        </div>
+        </div> -->
         <button id="login" class="btn btn-dark w-100 logobgcolor p-2">Login</button>
         <p class="m-2">New User? <a class="logocolor" href=<?php echo $baseUrl . "/Register" ?>>Register</a> <br>
             Forgot Password? <a class="logocolor" href=<?php echo $baseUrl . "/ResetPassword"; ?>>Reset</a></p>
