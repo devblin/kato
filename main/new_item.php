@@ -13,7 +13,6 @@
             <button id="chooseimage" class="btn btn-primary m-1">Choose Image</button>
             <button id="cancelimage" class="btn btn-danger m-1">Remove</button>
         </div>
-        <hr class="w-100">
         <div class="col-sm-6 col-lg-6 text-left">
             <div class="form-group mb-2">
                 <label class="mb-1"> Item Name</label>
