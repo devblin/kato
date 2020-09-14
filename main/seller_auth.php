@@ -74,36 +74,43 @@ if (isset($_SESSION['ID'])) {
         $data = json_encode($data);
         echo $data;
     } else if (isset($_POST['getweeksales'])) {
-        $sql  = "SELECT * FROM sales WHERE SSELLER=?";
-        $data = getArray($sql, "i", array($currentUserId));
-        if (is_array($data)) {
-            for ($i = 0; $i < count($data); $i++) {
-                $dateArr = explode(" ", $data[$i]['STAMP']);
-                $date = $dateArr[0];
-                $date  = weekOfMonth($date);
-                $cDate = date("Y-m-d");
-                $cDate = weekOfMonth($cDate);
+        $reqDate = $_POST['weekdate'];
+        $cDate = date("Y-m-d");
+        if ($cDate >= $reqDate) {
+            $reqDateMonth = explode("-", $reqDate);
+            $reqDateMonth = $reqDateMonth[1];
+            $reqDateWeek = weekOfMonth($reqDate);
+            $sql  = "SELECT * FROM sales WHERE SSELLER=?";
+            $data = getArray($sql, "i", array($currentUserId));
+            if (is_array($data)) {
+                $sendData = array(array(0, 0), array(0, 0), array(0, 0), array(0, 0));
+                for ($i = 0; $i < count($data); $i++) {
+                    $dateArr = explode(" ", $data[$i]['STAMP']);
+                    $date = $dateArr[0];
 
-                $week = $cDate - $date;
-                if ($week < 0) {
-                    $week  = -1 * $week;
-                }
-                $newQty = $data[$i]['SQTY'];
-                $sql0 = "SELECT * FROM products WHERE PID=?";
-                $newPrice = getData($sql0, "i", array($data[$i]['SITEMID']), "PPRICE");
-                $totalPrice =  intval($newPrice) * intval($newQty);
+                    $dateMonth = explode("-", $dateArr[0]);
+                    $dateMonth = $dateMonth[1];
 
-                if ($i == $week) {
-                    $sendData[$week][0] = $newQty;
-                    $sendData[$week][1] = $totalPrice;
-                } else {
-                    $sendData[$week][0] += $newQty;
-                    $sendData[$week][1] += $totalPrice;
+                    $dateWeek  = weekOfMonth($date);
+                    $week = $dateWeek;
+
+                    if ($dateMonth == $reqDateMonth && $week >= 0) {
+                        $newQty = $data[$i]['SQTY'];
+                        $sql0 = "SELECT * FROM products WHERE PID=?";
+                        $newPrice = getData($sql0, "i", array($data[$i]['SITEMID']), "PPRICE");
+                        $totalPrice =  intval($newPrice) * intval($newQty);
+
+                        $sendData[$week - 1][0] += $newQty;
+                        $sendData[$week - 1][1] += $totalPrice;
+                    }
                 }
+                $sendData = json_encode($sendData);
+                echo $sendData;
+            } else {
+                echo "no";
             }
-
-            $sendData = json_encode($sendData);
-            echo $sendData;
+        } else {
+            echo "future";
         }
     } else if (isset($_POST['accdetails'])) {
         $sql = "SELECT * FROM users WHERE ID=?";

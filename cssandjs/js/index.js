@@ -110,3 +110,27 @@ function readUrl(input, preview, choose) {
     alertMsg.showAlert("Invalid Image Type", "danger");
   }
 }
+
+function allZero(arr) {
+  let len = arr.length;
+  let res = false;
+  for (let i = 0; i < len; i++) {
+    for (let j = 0; j < 2; j++) {
+      if (arr[i][j] == 0) {
+        res = true;
+      } else {
+        res = false;
+      }
+    }
+  }
+  return res;
+}
+
+function isJsonString(str) {
+  try {
+    JSON.parse(str);
+  } catch (e) {
+    return false;
+  }
+  return true;
+}
