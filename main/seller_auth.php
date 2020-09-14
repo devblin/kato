@@ -78,7 +78,9 @@ if (isset($_SESSION['ID'])) {
         $cDate = date("Y-m-d");
         if ($cDate >= $reqDate) {
             $reqDateMonth = explode("-", $reqDate);
+            $reqDateYear = $reqDateMonth[2];
             $reqDateMonth = $reqDateMonth[1];
+
             $reqDateWeek = weekOfMonth($reqDate);
             $sql  = "SELECT * FROM sales WHERE SSELLER=?";
             $data = getArray($sql, "i", array($currentUserId));
@@ -89,12 +91,13 @@ if (isset($_SESSION['ID'])) {
                     $date = $dateArr[0];
 
                     $dateMonth = explode("-", $dateArr[0]);
+                    $dateYear = $dateMonth[2];
                     $dateMonth = $dateMonth[1];
 
                     $dateWeek  = weekOfMonth($date);
                     $week = $dateWeek;
 
-                    if ($dateMonth == $reqDateMonth && $week >= 0) {
+                    if ($dateMonth == $reqDateMonth && $dateYear == $reqDateYear && $week >= 0) {
                         $newQty = $data[$i]['SQTY'];
                         $sql0 = "SELECT * FROM products WHERE PID=?";
                         $newPrice = getData($sql0, "i", array($data[$i]['SITEMID']), "PPRICE");

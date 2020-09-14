@@ -52,8 +52,9 @@ class Stats {
         formData.append("weekdate", weekdate);
         formData.append("getweeksales", true);
         console.log(weekMonth);
-        var beforeSend = () => whileAuth("#week", false, defaultSpinner);
+        var beforeSend = () => whileAuth("#weekgraph", false, defaultSpinner);
         var success = (data) => {
+
             whileAuth("#week", false, "");
             $("#weekmonth").html(weekMonth);
             $("#weekgraph").html("");
@@ -62,6 +63,7 @@ class Stats {
                 var newData = JSON.parse(data);
                 console.log(newData);
             }
+            console.log(newData);
             if (data == "future") {
                 $("#weekgraph").html(this.noFuture);
             } else if (allZero(newData)) {
