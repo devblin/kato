@@ -1,7 +1,7 @@
 <style>
 #weekgraph {
-    border-left: 3px solid;
-    border-bottom: 3px solid;
+    border-left: 3px solid red;
+    border-bottom: 3px solid blue;
     min-height: 100px;
 }
 
@@ -14,19 +14,20 @@
 }
 </style>
 <div class="container p-0 ml-auto mr-auto mb-5 w-auto mt110">
-    <h3><i class="fas fa-chart-line"></i> Statistics
-
-    </h3>
-    <h5 class="d-flex" style="width:fit-content">
-        <label class="m-2 ">Date:</label>
-        <input id="weekselect" type="date" class="form-control m-1">
+    <h3><i class="fas fa-chart-line"></i> Statistics</h3>
+    <h6 class="d-flex m-0" style="width:fit-content">
+        <input id="weekselect" type="date" class="form-control p-1 m-1">
         <button id="getgraph" class="btn btn-warning m-1">Graph</button>
-    </h5>
+    </h6>
     <hr class="w-100 logobgcolor">
-    <div id="weekgraph" class="mb-2">
+    <div id="weekgraph" class="m-2">
     </div>
     <h6><b>Weekly Sales <span id="weekmonth"></span></b></h6>
-    <hr class="w-100 logobgcolor">
+    <h6 style="width: fit-content;" class="text-left m-2">
+        <label>Y:Weeks <span class="f20 font-weight-bolder" style="color: red;">------</span></label><br>
+
+        <label>X:Total <span class="f20 font-weight-bolder" style="color: blue;">------</span></label>
+    </h6>
 </div>
 <script>
 class Stats {
@@ -34,7 +35,7 @@ class Stats {
         'November', 'December'
     ];
     noData = " <h5 class='text-danger'>No Data</h5>";
-    noFuture = " <h5 class='text-warning'>Choose date on or before current-date</h5>";
+    noFuture = " <h5 class='text-warning'>Choose date on/before today's date</h5>";
     url = baseUrl + "/main/seller_auth.php";
     weekGraph = (week, sale, price, qty, profit, per) => {
         var width = 'width:' + sale + "%;";
@@ -95,7 +96,7 @@ $("#getgraph").click(function() {
         sales.getStats(1, this.weekdate);
         console.log(this.weekdate);
     } else {
-        console.log("Select a date please");
+        $("#weekgraph").html("<h5 class='text-danger'>Select a date</h5>");
     }
 });
 </script>
