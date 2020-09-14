@@ -41,8 +41,10 @@ class Stats {
     weekGraph = (week, sale, price, qty, profit, per) => {
         var width = 'width:' + sale + "%;";
         var val = "<div class='progress m-1' style='height:30px'>" +
-            "<div data-toggle='tooltip' title='" + "Qty Sold: " + qty + " | " + "Amount: " + profit +
-            " | Percentage: " + per + "%" +
+            "<div data-html='true' data-toggle='tooltip' title='" + "<u>Week-" + week + "</u> <br> Qty Sold: " +
+            qty + " <br> Amount: " +
+            profit +
+            " <br> Percentage: " + per + "%" +
             "' class='bg-info text-light progress-bar' style=" + width + ">Week - " + week + "</div></div>";
         $("#weekgraph").append(val);
     }
