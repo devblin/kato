@@ -18,7 +18,7 @@
 - Bootstrap
 - AJAX
 
-## Tasks
+## Features
 
 - [x] Login and Register
 - [x] Username and Password Validation
@@ -28,4 +28,6 @@
 - [x] Handle Storage
 - [x] Search Bar
 - [x] Purchase History
-- [x] Statistics
+- [x] Statistics (Graph)
+- [ ] Pagination
+- [ ] Payment Gateway
