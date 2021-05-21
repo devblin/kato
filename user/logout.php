@@ -7,7 +7,7 @@ if ($_COOKIE['katouser'] == $_SESSION['USER']) {
     setcookie("katopassword", "", time() - 3600, "/");
 }
 
-$baseurl = env("BASE_URL");
+$baseurl = $_ENV["BASE_URL"];
 session_unset();
 session_destroy();
 header("Location: " . $baseurl);

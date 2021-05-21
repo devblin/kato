@@ -17,4 +17,4 @@
         </div>
     </div>
 </div>
-<script src=<?php echo $baseUrl . "/cssandjs/js/seller.js"; ?>></script>
+<script src=<?php echo $baseUrl . "/static/js/seller.js"; ?>></script>

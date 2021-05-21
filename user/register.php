@@ -65,4 +65,4 @@ echo "<title>Kato | Register</title>";
         </p>
     </form>
 </div>
-<script src=<?php echo $baseUrl . "/cssandjs/js/register.js"; ?>></script>
+<script src=<?php echo $baseUrl . "/static/js/register.js"; ?>></script>

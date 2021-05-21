@@ -1,6 +1,5 @@
 <?php
-require_once __DIR__ . "/../setup/connection.php";
-require_once __DIR__ . "/../setup/autoload.php";
+require_once __DIR__ . "/../connection.php";
 function opData($sql0, $bindtyp, $bindval)
 {
     global $conn;

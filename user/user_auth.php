@@ -1,5 +1,5 @@
 <?php
-require __DIR__ . "/../setup/connection.php";
+require __DIR__ . "/../connection.php";
 require __DIR__ . "/../functions/mysql_func.php";
 
 if (isset($_POST['login'])) {

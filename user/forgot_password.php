@@ -24,4 +24,4 @@ echo "<title>Kato | Reset Password</title>";
             Already an User? <a class="logocolor" href=<?php echo $baseUrl ?>>Login</a></p>
     </form>
 </div>
-<script src=<?php echo $baseUrl . "/cssandjs/js/forgot_password.js"; ?>></script>
+<script src=<?php echo $baseUrl . "/static/js/forgot_password.js"; ?>></script>

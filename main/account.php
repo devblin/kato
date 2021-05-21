@@ -1,7 +1,7 @@
 <div class="container p-0 ml-auto mr-auto mb-4 mt110" style="height: 80vh;">
     <div class="alert alert-dismissible fade show" style=" z-index:2;">
         <button type="button" class="close">&times;</button>
-        <strong class="alert-msg">ERRO</strong>
+        <strong class="alert-msg">ERROR</strong>
     </div>
     <div class="m-1" style="    display: flex;
     flex-direction: column;
